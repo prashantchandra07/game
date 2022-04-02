@@ -20,8 +20,9 @@ def check_user_response(guess,count,a):
         if guess == a:
             print("\t\tHurray !!\n\t\tYou Guessed it correctly")
             flag = 1
+            exit()
 
-        if count<3 and flag == 0:
+        if count<2 and flag == 0:
             if guess<a:
                 print("The number is higher")
             else:
@@ -29,7 +30,7 @@ def check_user_response(guess,count,a):
 
             count = count+1
             guess = take_user_input()
-            st(guess,count,a)
+            check_user_response(guess,count,a)
 
         else:
             print("\t\tOPPIEESSS.....!!\n\t\tYou Missed it")
