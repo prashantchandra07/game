@@ -33,8 +33,9 @@ def check_user_response(guess,count,a):
             check_user_response(guess,count,a)
 
         else:
-            print("\t\tOPPIEESSS.....!!\n\t\tYou Missed it")
-            print("\t\tThe number was",a)
+            if flag == 0:
+                print("\t\tOPPIEESSS.....!!\n\t\tYou Missed it")
+                print("\t\tThe number was",a)
             
     except:
         pass
